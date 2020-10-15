@@ -26,16 +26,23 @@
     <aside class="aside">
         <h2>Manage Tools</h2>
         <div class="sort-button-container">
-            <h4>Sort by the most<br/>expensive tool</h4>
-            <button class="sort-button"><div class="sort-button-inner" id="sort-button-inner"></div></button>
+            <h4>Sort by the most<br />expensive tool</h4>
+            <button class="sort-button" id="sort-button">
+                <div class="sort-button-inner" id="sort-button-inner"></div>
+            </button>
         </div>
         <h2>Global price:</h2>
-        <button class="aside__price-button">Count</button>
+        <button class="aside__price-button" id="price-button">Count</button>
         <div class="aside__global-price">
             <p>Total expenses:</p>
-            <h4>$xxx.xx</h4>
+            <h4 id="total-expenses">$</h4>
         </div>
     </aside>
+
+    <main class="main__container">
+    </main>
+
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

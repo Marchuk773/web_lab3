@@ -1,3 +1,8 @@
+:root {
+    --sort-button-blue: rgb(99, 99, 243);
+    --price-button-blue: rgb(94, 163, 206);
+}
+
 .aside {
     position: fixed;
     height: 90%;
@@ -37,19 +42,24 @@
     padding: 1px;
     background-color: transparent;
     border-radius: 25px;
-    border-color: rgb(99, 99, 243);
+    border-color: gray;
+}
+
+.sort-button.active {
+    border-color: var(--sort-button-blue);
 }
 
 .sort-button-inner {
-    float: right;
+    float: left;
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: rgb(99, 99, 243);
+    background-color: gray;
 }
 
 .sort-button-inner.active {
-    float: left;
+    float: right;
+    background-color: var(--sort-button-blue);
 }
 
 .aside__price-button {
@@ -57,8 +67,8 @@
     height: 40px;
     border-radius: 10px;
     background-color: transparent;
-    border-color: rgb(94, 163, 206);
-    background-color: rgb(94, 163, 206);
+    border-color: var(--price-button-blue);
+    background-color: var(--price-button-blue);
     color: white;
     border-width: 2px;
 }
