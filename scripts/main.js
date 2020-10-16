@@ -9,7 +9,7 @@ const addToolButton = document.getElementById('add-item-button');
 const searchButton = document.getElementById('search-button');
 const itemsContainer = document.getElementById('main__container');
 const itemsList = [];
-var counter = 1;
+var counter = 0;
 
 sortButton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -49,7 +49,8 @@ addToolButton.addEventListener('click', (event) => {
 searchButton.addEventListener('click', (event) => {
     event.preventDefault();
     var text = document.getElementById("search-text").value;
-    var filteredItems = itemsList.filter(item => item.header == text || item.text == text);
+    var pattern = new RegExp(text);
+    var filteredItems = itemsList.filter(item => pattern.test(item.header) || pattern.test(item.text));
     updateDOM(filteredItems);
 });
 
