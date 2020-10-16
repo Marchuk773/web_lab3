@@ -17,12 +17,13 @@
                 <a href="#">Add Tools</a>
             </div>
             <form class="header__form">
-                <input type="text" placeholder="Type something..." class="header__searchbar">
-                <button type="submit">Search</button>
+                <input type="text" placeholder="Type something..." class="header__searchbar" id="search-text">
+                <button type="submit" id="search-button">Search</button>
                 <button type="reset">Clear</button>
             </form>
         </div>
     </header>
+
     <aside class="aside">
         <h2>Manage Tools</h2>
         <div class="sort-button-container">
@@ -37,12 +38,14 @@
             <p>Total expenses:</p>
             <h4 id="total-expenses">$</h4>
         </div>
+        <button id="add-item-button">Add Tool</button>
     </aside>
 
-    <main class="main__container">
+    <main class="main__container" id="main__container">
+        <!-- Items inserted here -->
     </main>
 
-    <script src="scripts/main.js"></script>
+    <script type='module' src="./scripts/main.js"></script>
 </body>
 
 </html>
