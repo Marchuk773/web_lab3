@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Tool</title>
+    <link rel="stylesheet" href="styles/add_edit_styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container-nav">
+                <h1>Instruments</h1>
+                <a href="index.html">My Tools</a>
+                <a href="#" id="add-item-button">Add Tools</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="add_edit_main" id="add_main">
+        <h1 class="add_edit_main__header">Add Tool</h1>
+        <form class="add_edit_form" id="add_form">
+            <div class="title_container">
+                <label for="add_title">Title:</label><br>
+                <input type="text" placeholder="Title.." class="title" id="add_title">
+            </div>
+            <div class="description_container">
+                <label for="add_description">Description:</label><br>
+                <textarea name="description" class="description" id="add_description"></textarea>
+            </div>
+            <div class="price_container">
+                <label for="add_price">Price:</label><br>
+                <input type="number" placeholder="Enter price in $" class="price" id="add_price">
+            </div>
+            <button type="submit" class="submit_form" id="add_tool">Submit</button>
+        </form>
+    </main>
+
+    <script type='module' src="./scripts/add.js"></script>
+</body>
+
+</html>

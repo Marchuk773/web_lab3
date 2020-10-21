@@ -79,3 +79,15 @@
     justify-content: space-between;
     width: 80%;
 }
+
+#show-all {
+    width: 40%;
+    margin-top: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: rgb(118, 194, 111);
+    background-color: rgb(118, 194, 111);
+    color: white;
+    border-width: 2px;
+}

@@ -1,0 +1,11 @@
+{
+    "name": "web-lab-4-5",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+      "start": "npx browser-sync start --server --files ."
+    },
+    "author": "Roman Marchuk",
+    "license": "Pls dont steal"
+  }

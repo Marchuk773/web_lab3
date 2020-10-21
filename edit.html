@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Tool</title>
+    <link rel="stylesheet" href="styles/add_edit_styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container-nav">
+                <h1>Instruments</h1>
+                <a href="index.html">My Tools</a>
+                <a href="#" id="add-item-button">Add Tools</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="add_edit_main" id="edit_main">
+        <h1 class="add_edit_main__header">Edit Tool</h1>
+        <form class="add_edit_form" id="edit_form">
+            <div class="title_container">
+                <label for="add_title">Title:</label><br>
+                <input type="text" placeholder="Title.." class="title" id="edit_title">
+            </div>
+            <div class="description_container">
+                <label for="add_description">Description:</label><br>
+                <textarea name="description" class="description" id="edit_description"></textarea>
+            </div>
+            <div class="price_container">
+                <label for="add_price">Price:</label><br>
+                <input type="number" placeholder="Enter price in $" class="price" id="edit_price">
+            </div>
+            <button type="submit" class="submit_form" id="edit_tool">Submit</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

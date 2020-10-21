@@ -1,0 +1,69 @@
+.header__container-nav a:first-of-type {
+    background-color: transparent;
+}
+
+.header__container-nav a:hover,
+.header__container-nav a:last-of-type {
+    background-color: rgb(184, 187, 202);
+}
+
+.add_edit_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.add_edit_main__header {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.add_edit_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+label {
+    font-weight: 500;
+}
+
+.title {
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.description_container,
+.price_container {
+    margin-top: 30px;
+}
+
+.description {
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.price {
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.submit_form {
+    font-size: 22px;
+    color: white;
+    font-weight: 800;
+    background-color: rgb(94, 163, 206);
+    border-color: rgb(94, 163, 206);
+    border-radius: 8px;
+    margin-top: 50px;
+    width: 350px;
+    height: 50px;
+}

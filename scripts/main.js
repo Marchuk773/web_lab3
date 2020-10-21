@@ -1,75 +1,66 @@
 import {
-    addItem,
+    displayItem,
     Item
 } from './item.js';
+
+import {
+    getTools
+} from './crudUtils.js';
+
 
 const sortButton = document.getElementById('sort-button');
 const priceButton = document.getElementById('price-button');
 const addToolButton = document.getElementById('add-item-button');
 const searchButton = document.getElementById('search-button');
 const itemsContainer = document.getElementById('main__container');
-const itemsList = [];
-var counter = 0;
+const showAll = document.getElementById('show-all');
+let actualItemsList = [];
+
+
+window.addEventListener('load', displayAll);
 
 sortButton.addEventListener('click', (event) => {
     event.preventDefault();
     sortButton.classList.toggle('active');
     document.getElementById('sort-button-inner').classList.toggle('active');
-    itemsList.sort((a, b) =>
+    actualItemsList.sort((a, b) =>
         b.price - a.price
     );
-    updateDOM(itemsList);
+    updateDOM(actualItemsList);
 });
 
 priceButton.addEventListener('click', (event) => {
     event.preventDefault();
-    var totalPrice = itemsList.reduce((counter, item) => (counter += item.price), 0);
+    let totalPrice = actualItemsList.reduce((counter, item) => (counter + item.price), 0);
     document.getElementById('total-expenses').innerText = totalPrice + '$';
 });
 
-addToolButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    var id = counter;
-    counter += 1;
-    var header = `Basic Header ${id}`;
-    var text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nesciunt inventore laudantium nulla, cupiditate fugit.';
-    var price = Math.floor(Math.random() * 1000);
-    var item = new Item(id, header, text, price);
-    itemsList.push(item);
-    addItem({
-        id,
-        header,
-        text,
-        price
-    });
+addToolButton.addEventListener('click', () => {
     sortButton.classList.remove('active');
     document.getElementById('sort-button-inner').classList.remove('active');
 });
 
 searchButton.addEventListener('click', (event) => {
     event.preventDefault();
-    var text = document.getElementById("search-text").value;
-    var pattern = new RegExp(text);
-    var filteredItems = itemsList.filter(item => pattern.test(item.header) || pattern.test(item.text));
+    let text = document.getElementById("search-text").value;
+    let pattern = new RegExp(text, 'i');
+    let filteredItems = actualItemsList.filter(item => pattern.test(item.header) || pattern.test(item.text));
+    actualItemsList = filteredItems;
     updateDOM(filteredItems);
 });
 
+showAll.addEventListener('click', displayAll);
 
 function updateDOM(givenList) {
-    var elements = itemsContainer.querySelectorAll('.main__item');
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].remove();
-    }
-    for (var i = 0; i < givenList.length; i++) {
-        var id = givenList.id;
-        var header = givenList[i].header;
-        var text = givenList[i].text;
-        var price = givenList[i].price;
-        addItem({
-            id,
-            header,
-            text,
-            price
-        });
+    itemsContainer.innerHTML = '';
+    for (const item of givenList) {
+        displayItem(item);
     }
 };
+
+async function displayAll(event) {
+    event.preventDefault();
+    let data = await getTools();
+    actualItemsList = data;
+    updateDOM(actualItemsList);
+}
