@@ -43,8 +43,9 @@ export async function deleteTool(id) {
 };
 
 export const checkParams = (header, description, price) => {
-    let pattern = new RegExp("//s*")
-    if (pattern.test(header) || pattern.test(description) == '' || pattern.test(price) == '') {
+    let pattern = new RegExp("^\\s*$");
+    console.log(header, description, price);
+    if (pattern.test(header) || pattern.test(description) || pattern.test(price)) {
         return false;
     } else {
         return true;
