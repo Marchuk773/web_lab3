@@ -11,10 +11,10 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__container-nav">
+            <div class="edit_header__container-nav">
                 <h1>Instruments</h1>
                 <a href="index.html">My Tools</a>
-                <a href="#" id="add-item-button">Add Tools</a>
+                <a href="add.html" id="add-item-button">Add Tools</a>
             </div>
         </div>
     </header>
@@ -38,6 +38,14 @@
         </form>
     </main>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script type='module' src="./scripts/edit.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 export class Item {
     constructor(id, header, description, price) {
         this.id = id,
-        this.header = header,
-        this.description = description,
-        this.price = price;
+            this.header = header,
+            this.description = description,
+            this.price = price;
     }
 }
 
@@ -21,9 +21,13 @@ const itemTemplate = ({
                     <h4>${price}$</h4>
                 </div>
                 <div class="main__item-buttons-container">
-                    <button class="main__item-button-edit" onclick="id=window.location.href='edit.html';">Edit</button>
-                    <button class="main__item-button-remove" onclick="document.getElementById(parentNode
-                        .parentNode.parentNode.id).remove()">Remove</button>
+                    <button class="main__item-button-edit" onclick="
+                    let id = parentNode.parentNode.parentNode.id;
+                    window.location.href='edit.html'+'?id='+'${id}&'+'?header='+'${header}&'+'?description='+'${description}&'
+                    +'?price='+'${price}';">Edit</button>
+                    <button class="main__item-button-remove" onclick="
+                        let id = parentNode.parentNode.parentNode.id;
+                        window.location.href='delete.html'+'?id='+'${id}';">Remove</button>
                 </div>
             </div>
         </div>`;

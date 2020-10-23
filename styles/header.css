@@ -17,7 +17,8 @@
     height: 60px;
 }
 
-.header__container-nav {
+.header__container-nav,
+.edit_header__container-nav {
     display: flex;
     margin: 5px 0 0 2%;
     width: 28%;
@@ -26,11 +27,13 @@
     justify-content: space-between;
 }
 
-.header__container-nav h1 {
+.header__container-nav h1,
+.edit_header__container-nav h1 {
     color: rgb(150, 155, 180);
 }
 
-.header__container-nav a {
+.header__container-nav a,
+.edit_header__container-nav a {
     text-decoration: none;
     color: black;
     width: auto;

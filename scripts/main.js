@@ -10,7 +10,6 @@ import {
 
 const sortButton = document.getElementById('sort-button');
 const priceButton = document.getElementById('price-button');
-const addToolButton = document.getElementById('add-item-button');
 const searchButton = document.getElementById('search-button');
 const itemsContainer = document.getElementById('main__container');
 const showAll = document.getElementById('show-all');
@@ -33,11 +32,6 @@ priceButton.addEventListener('click', (event) => {
     event.preventDefault();
     let totalPrice = actualItemsList.reduce((counter, item) => (counter + item.price), 0);
     document.getElementById('total-expenses').innerText = totalPrice + '$';
-});
-
-addToolButton.addEventListener('click', () => {
-    sortButton.classList.remove('active');
-    document.getElementById('sort-button-inner').classList.remove('active');
 });
 
 searchButton.addEventListener('click', (event) => {
@@ -63,4 +57,4 @@ async function displayAll(event) {
     let data = await getTools();
     actualItemsList = data;
     updateDOM(actualItemsList);
-}
+};
