@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Tool</title>
+    <link rel="stylesheet" href="styles/add_edit_styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container-nav">
+                <h1>Instruments</h1>
+                <a href="index.html">My Tools</a>
+                <a href="#" id="add-item-button">Add Tools</a>
+            </div>
+        </div>
+    </header>
+
+    <main class='main-delete'>
+        <button class="delete" id="delete">Do you really want to delete this tool?</button>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script type='module' src="./scripts/delete.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+@import url("normalise.css");
+@import url("global.css");
+@import url("header.css");
+@import url("add_edit.css");
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+    <link rel="stylesheet" href="styles/main_styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container-nav">
+                <h1>Instruments</h1>
+                <a href="#">My Tools</a>
+                <a href="add.html" id="add-item-button">Add Tools</a>
+            </div>
+            <form class="header__form">
+                <input type="text" placeholder="Search here..." class="header__searchbar" id="search-text">
+                <button type="submit" id="search-button">Search</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+    </header>
+
+    <aside class="aside">
+        <h2>Manage Tools</h2>
+        <div class="sort-button-container">
+            <h4>Sort by the most<br />expensive tool</h4>
+            <button class="sort-button" id="sort-button">
+                <div class="sort-button-inner" id="sort-button-inner"></div>
+            </button>
+        </div>
+        <h2>Global price:</h2>
+        <button class="aside__price-button" id="price-button">Count</button>
+        <div class="aside__global-price">
+            <p>Total expenses:</p>
+            <h4 id="total-expenses">$</h4>
+        </div>
+
+        <button id="show-all">Show all<br />Tools</button>
+    </aside>
+
+    <main class="main__container" id="main__container">
+        <!-- Items inserted here -->
+    </main>
+
+    <script type='module' src="./scripts/main.js"></script>
+</body>
+
+</html>
